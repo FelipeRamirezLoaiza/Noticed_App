@@ -66,12 +66,6 @@ h2 {
     text-decoration: none;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    gap: 40px; /* Espacio entre las imágenes */
-}
-
 .image-container {
     display: flex;
     position: relative;
@@ -123,7 +117,8 @@ h2 {
 /*Estilos de la sección del fondo*/
 .fondos .fondo img{
     position: relative;
-    width: 100%;
+    width: 100vw;
+
 }
 
 /*Estilos de la sección nosotros*/

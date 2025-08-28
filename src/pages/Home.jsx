@@ -1,5 +1,6 @@
-import React from "react";
-import "/src/assets/css/StyleIndex.css";
+import React from "react"
+import { Link } from "react-router-dom"
+import "../assets/css/StyleIndex.css"
 
 function Home() {
   return (
@@ -9,27 +10,27 @@ function Home() {
       <div className="body-content container">
         <div className="image-container">
           <div className="image1">
-            <img src="/assets/img/slider1.png" alt="" />
+            <img src="/img/slider1.png" alt="Slider 1" />
             <div className="image2">
-              <img src="/assets/img/slider2.png" alt="" />
+              <img src="/img/slider2.png" alt="Slider 2" />
             </div>
           </div>
         </div>
 
         <div className="image-container">
           <div className="image3">
-            <img src="/assets/img/slider1.png" alt="" />
+            <img src="/img/slider1.png" alt="Slider 1" />
             <div className="image4">
-              <img src="/assets/img/slider2.png" alt="" />
+              <img src="/img/slider2.png" alt="Slider 2" />
             </div>
           </div>
         </div>
 
         <div className="image-container">
           <div className="image5">
-            <img src="/assets/img/slider1.png" alt="" />
+            <img src="/img/slider1.png" alt="Slider 1" />
             <div className="image6">
-              <img src="/assets/img/slider2.png" alt="" />
+              <img src="/img/slider2.png" alt="Slider 2" />
             </div>
           </div>
         </div>
@@ -43,24 +44,22 @@ function Home() {
 
         <section className="fondos">
           <div className="fondo">
-            <img src="/assets/img/fondo.png" alt="" />
+            <img src="/img/fondo.png" alt="Fondo" />
           </div>
         </section>
       </div>
 
       <section className="nosotros">
         <div className="nosotros-txt">
-          <br /><br /><br />
           <h2>Somos</h2>
           <p>La mejor <br /> <span>Tienda de ropa</span></p>
         </div>
         <div className="info">
-          <a href="/views/Nosotros.html" className="enlace">Ver más</a>
+          <Link to="/nosotros" className="enlace">Ver más</Link>
         </div>
       </section>
     </main>
-  );
+  )
 }
 
-export default Home;
-
+export default Home
