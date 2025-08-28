@@ -1,0 +1,160 @@
+/* Estilos del cuerpo*/
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    text-align: center;
+    padding: 3px;
+}
+
+.body-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre imágenes */
+    padding: 20px;
+    text-align: center
+}
+
+/*Estilos de la sección de productos*/
+.productos {
+    background: #333;
+}
+
+.productos .product{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    align-items: center;
+    gap: 10px; /* Espacio entre imágenes */
+    padding: 20px;
+}
+
+.productos .product img{
+    width: 80%;
+    padding: 20px;
+    border-radius: 20% 15%;
+    transition: transform 0.1s;
+}
+
+.productos .product img:hover{
+    transform: scale(1.09);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.image-row,
+.image-row2,
+.image-row3 {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre las imágenes */
+    margin-bottom: 40px; /* Espacio debajo de la fila */
+}
+
+.image-container {
+    position: relative;
+    width: 350px;
+    cursor: pointer;
+}
+.image1,
+.image3,
+.image5,
+.image7,
+.image9,
+.image11,
+.image13,
+.image15,
+.image17 {
+    position: relative;
+    width: 100%;
+}
+.image2,
+.image4,
+.image6,
+.image8,
+.image10,
+.image12,
+.image14,
+.image16,
+.image18 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.image1 img,
+.image3 img,
+.image5 img,
+.image7 img,
+.image9 img,
+.image11 img,
+.image13 img,
+.image15 img,
+.image17 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: opacity 0.6s ease;
+}
+.image2 img,
+.image4 img,
+.image6 img,
+.image8 img,
+.image10 img,
+.image12 img,
+.image14 img,
+.image16 img,
+.image18 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.image-container:hover .image2,
+.image-container:hover .image4,
+.image-container:hover .image6,
+.image-container:hover .image8,
+.image-container:hover .image10,
+.image-container:hover .image12,
+.image-container:hover .image14,
+.image-container:hover .image16,
+.image-container:hover .image18 {
+    opacity: 1;
+}
+.hover-overlay,
+.hover-overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%; /* Ajusta la altura según necesites */
+    background: rgba(0, 0, 0, 0.5); /* Color de fondo con opacidad */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+.image2:hover .hover-overlay,
+.image4:hover .hover-overlay,
+.image6:hover .hover-overlay,
+.image8:hover .hover-overlay,
+.image10:hover .hover-overlay,
+.image12:hover .hover-overlay,
+.image14:hover .hover-overlay,
+.image16:hover .hover-overlay,
+.image18:hover .hover-overlay {
+    opacity: 1;
+}
+
+
