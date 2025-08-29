@@ -1,172 +1,127 @@
-/* Estilos del cuerpo*/
-body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    margin: 0;
-    padding: 3px;
-    margin-left: 0px;
-    margin-right: 0px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-/*Estilos del contenido principal*/
-.body-content {
-    padding: 0px 0;
-    text-align: center;
-    padding: 50px;
+/* ============================= */
+/* Estilos Generales del Home    */
+/* ============================= */
+main {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  text-align: center;
+  background-color: #dfdfdf;
 }
 
 h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Fuente del texto*/
-    font-size: 18px; /*Tamaño de la fuente*/
-    color: #555555; /*Color del texto*/
-    margin-bottom: 0px; /*Espacio inferior entre elementos*/
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 100px;
+  font-size: 1.5rem;
+  margin-top: 80px;
+  margin-bottom: 30px;
 }
 
-.body-content .enlace1,
-.body-content .enlace2,
-.body-content .enlace3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*Fuente del texto*/
-    font-size: 16px; /*Tamaño de la fuente*/
-    top: 40%;
-    position: absolute;
-    color: #555555; /*Color del texto*/
-    margin-bottom: 0px; /*Espacio inferior entre elementos*/
-    text-transform: uppercase;
+/* Contenedor general de las imágenes */
+.body-content.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin-bottom: 300px;
+  flex-wrap: wrap;
 }
 
-.body-content .enlace1:hover,
-.body-content .enlace2:hover,
-.body-content .enlace3:hover {
-    color: #000000;
-    font-size: 28px;
-    transform: translateX(-10px);
-}
-
-.body-content .enlace1 {
-    left: 235px;
-}
-
-.body-content .enlace2 {
-    left: 625px;
-}
-
-.body-content .enlace3 {
-    left: 1015px;
-}
-
-.body-content a{
-    text-decoration: none;
-}
-
+/* Cada bloque de imagen */
 .image-container {
-    display: flex;
-    position: relative;
-    width: 350px;
+  position: relative;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
-.image1,
-.image3,
-.image5 {
-    position: relative;
+/* Link dentro de cada imagen */
+.image-container .category-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.image-container .category-link:hover { 
+  font-size: 2.5rem;
+  color: #363636;
+}
+
+/* Imagen principal */
+.image1 img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Imagen secundaria (hover) */
+.image2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image2 img {
+  width: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.image-container:hover .image2 {
+  opacity: 1;
+}
+
+/* Imagen background */
+.fondos {
     width: 100%;
 }
 
-.image2,
-.image4,
-.image6 {
-    position: absolute;
-    top: 0;
-    left: 0;
+.fondo img {
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.image1 img,
-.image3 img,
-.image5 img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: opacity 0.6s ease;
-}
-
-.image2 img,
-.image4 img,
-.image6 img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-container:hover .image2,
-.image-container:hover .image4,
-.image-container:hover .image6 {
-    opacity: 1;
-}
-
-/*Estilos de la sección del fondo*/
-.fondos .fondo img{
-    position: relative;
-    width: 100vw;
-
-}
-
-/*Estilos de la sección nosotros*/
-.nosotros {
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-.nosotros-txt {
-    margin-bottom: 40px;
-}
-
-.nosotros h2 {
-    padding-top: 20px;
-    font-size: 2.5em;
-    color: #333;
-    margin: 0 0 20px;
-}
-
-.nosotros p {
-    font-size: 1.5em;
-    color: #666;
     margin: 0;
 }
 
-.nosotros p span {
-    color: #666;
-    font-weight: bold;
+/* Sección Nosotros */
+.nosotros{
+  padding: 150px 150px;
 }
 
-.info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+.nosotros-txt h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
+.nosotros-txt p, span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Enlace sección Nosotros */
 .enlace {
-    display: inline-block;
-    padding: 14px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-bottom: 120px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 100;
+  transition: background 0.3s;
 }
 
 .enlace:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
