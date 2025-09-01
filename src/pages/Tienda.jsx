@@ -1,153 +1,55 @@
 import React from "react";
 import "../assets/css/StyleTienda.css";
+import ProductCard from "../components/ProductCard";
 
 function Tienda() {
+  // Definir productos
+  const productos = [
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+  ];
+
   return (
     <div>
-      <section className="productos">
-          <div class="product">
-              <a href="#"><img src="/src/assets/img/option1.png" alt="" /></a>
-              <a href="#"><img src="/src/assets/img/option2.png" alt="" /></a> 
-              <a href="#"><img src="/src/assets/img/option3.png" alt="" /></a>  
-          </div>
+      {/* Sección de opciones */}
+      <section className="options">
+        <div className="categories">
+          <a href="#"><img src="/img/option1.png" alt="option1" /></a>
+          <a href="#"><img src="/img/option2.png" alt="option2" /></a>
+          <a href="#"><img src="/img/option3.png" alt="option3" /></a>
+        </div>
       </section>
+
+      {/* Productos en filas */}
       <div className="container">
-          <div className="image-row">
-              <div className="image-container">
-                  <div className="image1">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image2">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image3">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image4">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image5">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image6">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="image-row2">
-              <div className="image-container">
-                  <div className="image7">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image8">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image9">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image10">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image11">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image12">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div className="image-row3">
-              <div className="image-container">
-                  <div className="image13">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image14">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image15">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image16">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div className="image-container">
-                  <div className="image17">
-                      <img src="/src/assets/img/slider1.png" alt="" />
-                      <div className="image18">
-                          <img src="/src/assets/img/slider2.png" alt="" />
-                          <div className="hover-overlay">
-                              <div className="overlay-content">
-                                  <p>Buso Noiced verde</p>
-                                  <p>Oversize con capucha</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        {productos.map((p, index) => (
+            <ProductCard
+                key={index}
+                img1={p.img1}
+                img2={p.img2}
+                title={p.title}
+                description={p.description}
+            />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default Tienda
-
