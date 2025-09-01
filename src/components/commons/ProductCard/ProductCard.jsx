@@ -1,4 +1,5 @@
 import React from "react"
+import "./ProductCard.css"
 
 function ProductCard({ img1, img2, title, description }) {
   return (

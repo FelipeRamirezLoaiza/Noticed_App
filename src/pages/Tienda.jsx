@@ -1,6 +1,6 @@
 import React from "react";
 import "../assets/css/StyleTienda.css";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/commons/ProductCard/ProductCard.jsx";
 
 function Tienda() {
   // Definir productos
