@@ -1,0 +1,65 @@
+/* ============================= */
+/* Estilos Generales del Header  */
+/* ============================= */
+header {
+  border-bottom: 1px solid #dbd8d8;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  padding: 10px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Logo */
+.logo img {
+  height: 70px;
+  margin-left: -15px;
+  transition: transform 0.1s;
+}
+
+.logo img:hover {
+  transform: scale(1.09);
+}
+
+/* Menú (oculto en desktop) */
+.menu-icono {
+  display: none;
+}
+
+/* Navbar */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin-left: 50px;
+}
+
+.navbar li {
+  margin: 0 12px;
+}
+
+.navbar a {
+  display: flex;
+  align-items: center;
+  color: #727272;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #000000;
+}
+
+.navbar a img {
+  height: 20px;
+}
+
+/* Checkbox para menú responsive */
+#menu {
+  display: none;
+}

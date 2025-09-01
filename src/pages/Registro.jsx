@@ -7,7 +7,6 @@ function Registro() {
     <div className="registro-page">
       <div className="container">
         <h1>REGISTRARSE</h1>
-          <br /><br />
           <RegisterForm />
       </div>
     </div>

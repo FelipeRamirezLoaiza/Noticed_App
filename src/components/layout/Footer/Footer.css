@@ -1,0 +1,78 @@
+/* ============================= */
+/* Estilos Generales del Footer  */
+/* ============================= */
+footer {
+  background-color: #575656;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 0px 0px 50px 0px;
+}
+
+.footer-txt {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Secciones dentro del pie de página */
+.footer-txt div {
+  flex: 1 1 30%;
+  margin: 20px 10px;
+}
+
+.footer-txt h2 {
+  font-size: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+/* Enlaces generales */
+.somos a,
+.ayuda a,
+.termino a {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  color: #b8b7b7;
+  text-decoration: none;
+  transition: color 0.1s, transform 0.1s;
+}
+
+.somos a:hover,
+.ayuda a:hover,
+.termino a:hover {
+  color: #ffffff;
+}
+
+.somos a,
+.ayuda a {
+  display: block;
+}
+
+/* Ajustes específicos para .termino */
+.termino {
+  padding: 50px;
+}
+
+.termino a {
+  margin: 40px 40px 5px 10px;
+}
+
+.termino a:hover {
+  transform: scale(1.09);
+  text-decoration: underline;
+}
+
+/* Redes sociales */
+.siguenos a {
+  margin: 10px;
+}
+
+.siguenos img {
+  width: 24px;
+  transition: transform 0.1s;
+}
+
+.siguenos img:hover {
+  transform: scale(1.2);
+}

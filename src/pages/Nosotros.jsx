@@ -3,7 +3,7 @@ import "../assets/css/StyleNosotros.css"
 
 function Nosotros() {
   return (
-    <div>
+    <div className="nosotros-page">
       <div className="container-text">
           <h1>SOMOS</h1>
           <p>La manera que hemos encontrado para perdurar es tratándonos con rigor y amor al mismo tiempo,

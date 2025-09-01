@@ -1,9 +1,9 @@
 import React from "react"
-import "../assets/css/StyleFooter.css"
+import "./Footer.css"
 
 function Footer() {
   return (
-    <footer className="footer container">
+    <footer>
       <div className="footer-txt">
         <div className="somos">
           <h2>Quiénes somos</h2>
