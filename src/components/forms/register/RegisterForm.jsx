@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Input from "./commons/Input/Input.jsx"
-import Button from "./commons/Button/Button.jsx"
+import "./RegisterForm.css"
+import Input from "../../commons/Input/Input.jsx"
+import Button from "../../commons/Button/Button.jsx"
 
 function RegisterForm() {
   return (

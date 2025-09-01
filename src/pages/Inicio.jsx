@@ -1,6 +1,6 @@
 import React from "react"
 import "../assets/css/StyleInicio.css"
-import LoginForm from "../components/LoginForm.jsx"
+import LoginForm from "../components/forms/login/LoginForm.jsx"
 
 function Inicio() {
   return (

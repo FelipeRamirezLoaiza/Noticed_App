@@ -1,0 +1,20 @@
+/* h2 */
+#register h2{
+  font-size: 15px;
+  color: #bebebe;
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  margin-left: -8px;
+}
+
+/* Link de registro */
+.register a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register a:hover {
+  color: #0056b3;
+}

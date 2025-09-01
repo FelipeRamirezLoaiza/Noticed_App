@@ -1,6 +1,6 @@
 import React from "react"
 import "../assets/css/StyleRegistro.css"
-import RegisterForm from "../components/RegisterForm"
+import RegisterForm from "../components/forms/register/RegisterForm.jsx"
 
 function Registro() {
   return (
