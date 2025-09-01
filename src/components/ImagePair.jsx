@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "../assets/css/StyleIndex.css"
+import "../assets/css/StyleHome.css"
 
 function ImagePair({ image1, image2, alt1, alt2, linkText, linkTo }) {
   return (

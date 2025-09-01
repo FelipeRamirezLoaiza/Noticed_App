@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import Input from "./Input.jsx"
-import Button from "./Button.jsx"
+import Input from "./commons/Input/Input.jsx"
+import Button from "./commons/Button/Button.jsx"
 
 function LoginForm() {
   return (

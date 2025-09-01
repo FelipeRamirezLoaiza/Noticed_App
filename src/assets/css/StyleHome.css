@@ -97,6 +97,10 @@ h2 {
   padding: 150px 150px;
 }
 
+.nosotros .form-button {
+  max-width: 110px;
+}
+
 .nosotros-txt h2 {
   font-size: 3.5rem;
   font-weight: bold;
@@ -108,21 +112,4 @@ h2 {
   font-weight: bold;
   color: #333;
   margin-bottom: 30px;
-}
-
-/* Button */
-.nosotros .form-button {
-  width: 10%;
-  background-color: #007BFF;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.form-button:hover {
-  background-color: #0056b3;
 }

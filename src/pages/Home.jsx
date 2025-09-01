@@ -2,8 +2,8 @@ import React from "react"
 import { Link } from "react-router-dom"
 import ImagePair from "../components/ImagePair"
 import BackgroundSection from "../components/BackgroundSection"
-import Button from "../components/Button.jsx"
-import "../assets/css/StyleIndex.css"
+import Button from "../components/commons/Button/Button.jsx"
+import "../assets/css/StyleHome.css"
 
 function Home() {
   return (

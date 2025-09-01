@@ -7,7 +7,6 @@ function Inicio() {
     <div className="inicio-page">
       <div className="container">
         <h1>INICIAR SESIÓN</h1>
-        <br /><br />
         <LoginForm />
       </div>
     </div>
