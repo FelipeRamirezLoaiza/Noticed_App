@@ -1,7 +1,7 @@
 import React from "react"
 import "./Input.css"
 
-function Input({ type, name, id, placeholder }) {
+function Input({ type, name, id, placeholder, value, onChange }) {
   return (
     <input
       className="form-input"
@@ -9,6 +9,8 @@ function Input({ type, name, id, placeholder }) {
       name={name}
       id={id}
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
     />
   );
 }
