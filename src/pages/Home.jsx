@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import ImagePair from "../components/ImagePair"
-import BackgroundSection from "../components/BackgroundSection"
+import ImagePair from "../components/commons/ImagePair/ImagePair.jsx"
+import BackgroundSection from "../components/commons/BackgroundSection/BackgroundSection.jsx"
 import Button from "../components/commons/Button/Button.jsx"
 import "../assets/css/StyleHome.css"
 
@@ -41,7 +41,7 @@ function Home() {
           <h2>Somos</h2>
           <p>La mejor <br /> <span>Tienda de ropa</span></p>
         </div>
-        <Link to="/nosotros"> <Button type="submit" className="form-button "text="Ver más" /></Link>
+        <Link to="/nosotros"> <Button type="submit" className="form-button" text="Ver más" /></Link>
       </section>
     </main>
   )

@@ -1,5 +1,5 @@
 import React from "react"
-import "../assets/css/StyleHome.css"
+import "./BackgroundSection.css"
 
 function BackgroundSection() {
   return (
