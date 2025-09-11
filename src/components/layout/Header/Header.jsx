@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import "./Header.css"
 
-function Header() {
+function Header({ onPerfilClick }) {
   return (
     <header>
       <div className="menu-container">
@@ -30,6 +30,9 @@ function Header() {
             <li><Link to="/tienda">Tienda</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
+            <li onClick={onPerfilClick} style={{ cursor: "pointer" }}>
+              Perfil
+            </li>
           </ul>
         </nav>
       </div>

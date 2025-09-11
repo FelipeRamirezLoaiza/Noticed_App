@@ -1,6 +1,11 @@
 /* ============================ */
 /* Estilos Generales del Home   */
 /* ============================ */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 main {
   font-family: Arial, sans-serif;
   padding: 0.1rem;

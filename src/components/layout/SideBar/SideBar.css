@@ -1,0 +1,30 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px; /* Oculto inicialmente */
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: white;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  transform: translateX(100%); 
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sidebar.open {
+  right: 0; /* Se despliega desde la derecha */
+  transform: translateX(0);  /* Se desliza */
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
