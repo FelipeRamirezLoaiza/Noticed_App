@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Routes, Route } from "react-router-dom"
 import Home from "./pages/Home.jsx"
 import Inicio from "./pages/Inicio.jsx"
@@ -17,6 +17,15 @@ function App() {
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen)
   }
+
+  // Bloquear/desbloquear scroll cuando cambie el estado
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+  }, [sidebarOpen])
 
   return (
     <>

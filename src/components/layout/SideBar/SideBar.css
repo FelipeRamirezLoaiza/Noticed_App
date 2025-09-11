@@ -1,17 +1,42 @@
+/* ============================== */
+/* Estilos Generales del SideBar  */
+/* ============================== */
+/* Overlay que bloquea interacción */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 9998;
+  pointer-events: all;
+}
+
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -250px; /* Oculto inicialmente */
-  width: 250px;
-  height: 100%;
-  background: #333;
-  color: white;
-  padding: 20px;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
   transition: right 0.3s ease;
-  z-index: 1000;
-  transform: translateX(100%); 
-  opacity: 0;
-  visibility: hidden;
+  z-index: 9999;
+
+  display: flex; 
+  flex-direction: column;
+  box-sizing: border-box; 
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
 }
 
 .sidebar.open {
@@ -21,10 +46,38 @@
   visibility: visible;
 }
 
+.sidebar ul li a {
+  text-decoration: none;
+  color: inherit; 
+  display: block;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+  background-color: #d8d8d8;
+}
+
 .close-btn {
   background: none;
   border: none;
-  color: white;
+  color: #333;
   font-size: 24px;
   cursor: pointer;
+}
+
+.sidebar .form-button {
+  background-color: #b6b6b6;
+  color: #333;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+
+.sidebar .form-button:hover { 
+  background-color: #9c9c9c;
+}
+
+/* Checkbox para menú responsive */
+#menu {
+  display: none;
 }

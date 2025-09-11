@@ -30,6 +30,7 @@ export async function loginUser(email, password) {
       const data = await response.json()
       alert("Inicio de sesión exitoso")
       console.log("Usuario:", data.user)
+      localStorage.setItem("user", JSON.stringify(data.user))
       return data
     } else {
       alert("Email o contraseña incorrectos")
@@ -40,6 +41,10 @@ export async function loginUser(email, password) {
     console.error("Error:", error)
     return null
   }
+}
+
+export function logoutUser() {
+  localStorage.removeItem("user")
 }
 
 export async function registerUser(email, password, confirmPassword) {
