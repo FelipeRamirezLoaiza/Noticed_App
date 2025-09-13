@@ -30,7 +30,10 @@ export async function loginUser(email, password) {
       const data = await response.json()
       alert("Inicio de sesión exitoso")
       console.log("Usuario:", data.user)
-      localStorage.setItem("user", JSON.stringify(data.user))
+      localStorage.setItem("user", JSON.stringify({
+        ...data.user,
+        foto: "/img/profile.jpg"
+      }))
       return data
     } else {
       alert("Email o contraseña incorrectos")

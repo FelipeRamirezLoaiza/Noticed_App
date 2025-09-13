@@ -1,10 +1,13 @@
 import React from "react"
 import "./Button.css"
 
-function Button({ type = "button", text, onClick }) {
+function Button({ className = "", type = "button", text, onClick }) {
+
+  const classes = (`form-button ${className}`).trim();
+
   return (
     <input
-      className="form-button"
+      className={classes}
       type={type}
       value={text}
       onClick={onClick}

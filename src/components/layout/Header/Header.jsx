@@ -5,6 +5,7 @@ import "./Header.css"
 function Header({ onPerfilClick }) {
 
   const user = JSON.parse(localStorage.getItem("user"))
+  const Profile = user?.foto || "/img/profile.jpg"
 
   return (
     <header>
@@ -41,9 +42,11 @@ function Header({ onPerfilClick }) {
             {/* Mostrar perfil solo si hay usuario logueado */}
             {user && (
               <li onClick={onPerfilClick} style={{ cursor: "pointer" }}>
-                <a>
-                  Perfil
-                </a>
+                <img 
+                  src={user?.foto || Profile} 
+                  alt="Avatar"
+                  className="avatar"
+                />
               </li>
             )}
           </ul>

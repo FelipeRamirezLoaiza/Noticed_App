@@ -56,6 +56,15 @@ header {
   height: 20px;
 }
 
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
 /* Checkbox para menú responsive */
 #menu {
   display: none;
