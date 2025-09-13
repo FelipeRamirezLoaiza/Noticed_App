@@ -1,8 +1,13 @@
 import React, { useState, useContext} from "react"
 import { Link } from "react-router-dom"
+import SearchBar from "../../commons/SearchBar/SearchBar"
 import "./Header.css"
 
 function Header({ onPerfilClick }) {
+
+  const handleSearch = (query) => {
+    console.log("Buscando:", query);
+  }
 
   const user = JSON.parse(localStorage.getItem("user"))
   const Profile = user?.foto || "/img/profile.jpg"
@@ -19,6 +24,12 @@ function Header({ onPerfilClick }) {
           <img className="menu-icono" src="/img/menu.png" alt="Menú" />
         </label>
 
+        {/* Barra de búsqueda */}
+        <div className="search-container">
+          <SearchBar onSearch={handleSearch} />
+        </div>
+
+        {/* Opciones */}
         <nav className="navbar">
           <ul>
             <li>
@@ -26,6 +37,10 @@ function Header({ onPerfilClick }) {
                   <img src="/img/home.png" alt="Acceso" />
                 </Link>
             </li>
+            <li><Link to="/tienda">Tienda</Link></li>
+            <li><Link to="/nosotros">Nosotros</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
+            
             {/* Solo mostrar Login si no hay usuario */}
             {!user && (
               <li>
@@ -34,10 +49,6 @@ function Header({ onPerfilClick }) {
                 </Link>
               </li>
             )}
-
-            <li><Link to="/tienda">Tienda</Link></li>
-            <li><Link to="/nosotros">Nosotros</Link></li>
-            <li><Link to="/contacto">Contacto</Link></li>
             
             {/* Mostrar perfil solo si hay usuario logueado */}
             {user && (
