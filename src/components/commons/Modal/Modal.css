@@ -5,22 +5,22 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000; /* más alto que el sidebar */
+  z-index: 10000;
 }
 
 .modal {
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  width: 400px;
-  max-width: 90%;
+  background: rgb(255, 255, 255);  
+  padding: 30px 40px;
+  width: 600px;
+  max-width: 95%;
   position: relative;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease-in-out;
-  z-index: 2100; /* encima del overlay */
+  z-index: 2100;
+  opacity: 85%;
 }
 
 .modal h2 {
@@ -32,6 +32,23 @@
   border: none;
   position: relative;
   text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #000;
 }
 
 @keyframes fadeIn {

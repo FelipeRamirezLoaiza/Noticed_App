@@ -52,6 +52,13 @@ header {
   color: #000000;
 }
 
+.login-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .navbar a img {
   height: 20px;
 }

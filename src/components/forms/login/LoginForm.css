@@ -1,10 +1,36 @@
 /* Link de inicio */
+form h3 {
+  text-align: start;
+  margin-left: 2px;
+  font-size: 15px;
+}
+
 .login a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #050505;
+  font-size: 14px;
 }
 
 .login a:hover {
-  color: #0056b3;
+  cursor: pointer;
+  color: #3d3d3d;
+}
+
+.login p {
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.login p:hover {
+  cursor: pointer;
+  color: #3d3d3d;
+}
+
+.button {
+  background-color: #b6b6b6;
+  color: #000000;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background-color: #9c9c9c;
 }

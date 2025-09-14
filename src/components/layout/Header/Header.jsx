@@ -1,9 +1,16 @@
-import React, { useState, useContext} from "react"
-import { Link } from "react-router-dom"
+import React, { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import SearchBar from "../../commons/SearchBar/SearchBar"
+import Input from "../../commons/Input/Input.jsx"
+import Button from "../../commons/Button/Button.jsx"
+import { loginUser } from "../../../utils/auth.js"
+import Modal from "../../commons/Modal/Modal";
+import LoginForm from "../../forms/login/LoginForm";
 import "./Header.css"
 
 function Header({ onPerfilClick }) {
+
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   const handleSearch = (query) => {
     console.log("Buscando:", query);
@@ -40,13 +47,16 @@ function Header({ onPerfilClick }) {
             <li><Link to="/tienda">Tienda</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
-            
+
             {/* Solo mostrar Login si no hay usuario */}
             {!user && (
               <li>
-                <Link to="/inicio">
+                <button
+                  className="login-btn"
+                  onClick={() => setIsLoginOpen(true)}
+                >
                   <img src="/img/acceso.svg" alt="Acceso" />
-                </Link>
+                </button>
               </li>
             )}
             
@@ -63,6 +73,16 @@ function Header({ onPerfilClick }) {
           </ul>
         </nav>
       </div>
+
+      {/* Modal con el LoginForm */}
+      <Modal
+        isOpen={isLoginOpen}
+        title="INICIAR SESIÓN"
+        onClose={() => setIsLoginOpen(false)}
+      >
+        <LoginForm onSuccess={() => setIsLoginOpen(false)} />
+      </Modal>
+      
     </header>
   )
 }
