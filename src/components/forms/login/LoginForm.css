@@ -1,18 +1,11 @@
+/* ============================ */
+/* Estilos Generales del Login  */
+/* ============================ */
 /* Link de inicio */
 form h3 {
   text-align: start;
   margin-left: 2px;
   font-size: 15px;
-}
-
-.login a {
-  color: #050505;
-  font-size: 14px;
-}
-
-.login a:hover {
-  cursor: pointer;
-  color: #3d3d3d;
 }
 
 .login p {
@@ -33,4 +26,14 @@ form h3 {
 
 .button:hover {
   background-color: #9c9c9c;
+}
+
+.login span {
+  color: #000000;
+  font-size: 15px;
+  text-decoration: underline;
+}
+
+.login span:hover {
+  color: #3d3d3d;
 }

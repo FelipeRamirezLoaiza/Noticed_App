@@ -71,7 +71,7 @@ export async function registerUser(email, password, confirmPassword) {
     return null
   }
 
-  if (password.length < 12) {
+  if (password.length < 8) {
     alert("La contraseña debe tener como mínimo 12 caracteres")
     return null
   }

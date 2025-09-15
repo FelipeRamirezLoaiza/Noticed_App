@@ -1,23 +1,32 @@
-import React, { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
-import SearchBar from "../../commons/SearchBar/SearchBar"
-import Input from "../../commons/Input/Input.jsx"
-import Button from "../../commons/Button/Button.jsx"
-import { loginUser } from "../../../utils/auth.js"
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import SearchBar from "../../commons/SearchBar/SearchBar";
 import Modal from "../../commons/Modal/Modal";
 import LoginForm from "../../forms/login/LoginForm";
-import "./Header.css"
+import RegisterForm from "../../forms/register/RegisterForm";
+import "./Header.css";
 
 function Header({ onPerfilClick }) {
-
   const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   const handleSearch = (query) => {
     console.log("Buscando:", query);
-  }
+  };
 
-  const user = JSON.parse(localStorage.getItem("user"))
-  const Profile = user?.foto || "/img/profile.jpg"
+  const user = JSON.parse(localStorage.getItem("user"));
+  const Profile = user?.foto || "/img/profile.jpg";
+
+  // funciones para alternar modales
+  const openRegisterFromLogin = () => {
+    setIsLoginOpen(false);
+    setIsRegisterOpen(true);
+  };
+
+  const openLoginFromRegister = () => {
+    setIsRegisterOpen(false);
+    setIsLoginOpen(true);
+  };
 
   return (
     <header>
@@ -40,15 +49,14 @@ function Header({ onPerfilClick }) {
         <nav className="navbar">
           <ul>
             <li>
-                <Link to="/">
-                  <img src="/img/home.png" alt="Acceso" />
-                </Link>
+              <Link to="/">
+                <img src="/img/home.png" alt="Acceso" />
+              </Link>
             </li>
             <li><Link to="/tienda">Tienda</Link></li>
             <li><Link to="/nosotros">Nosotros</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
 
-            {/* Solo mostrar Login si no hay usuario */}
             {!user && (
               <li>
                 <button
@@ -59,12 +67,11 @@ function Header({ onPerfilClick }) {
                 </button>
               </li>
             )}
-            
-            {/* Mostrar perfil solo si hay usuario logueado */}
+
             {user && (
               <li onClick={onPerfilClick} style={{ cursor: "pointer" }}>
-                <img 
-                  src={user?.foto || Profile} 
+                <img
+                  src={user?.foto || Profile}
                   alt="Avatar"
                   className="avatar"
                 />
@@ -74,17 +81,31 @@ function Header({ onPerfilClick }) {
         </nav>
       </div>
 
-      {/* Modal con el LoginForm */}
+      {/* Modal Login */}
       <Modal
         isOpen={isLoginOpen}
         title="INICIAR SESIÓN"
         onClose={() => setIsLoginOpen(false)}
       >
-        <LoginForm onSuccess={() => setIsLoginOpen(false)} />
+        <LoginForm
+          onSuccess={() => setIsLoginOpen(false)}
+          onRegisterClick={openRegisterFromLogin} // <- pasa la función aquí
+        />
       </Modal>
-      
+
+      {/* Modal Register */}
+      <Modal
+        isOpen={isRegisterOpen}
+        title="REGISTRARSE"
+        onClose={() => setIsRegisterOpen(false)}
+      >
+        <RegisterForm
+          onSuccess={() => setIsRegisterOpen(false)}
+          onLoginClick={openLoginFromRegister} // <- y aquí
+        />
+      </Modal>
     </header>
-  )
+  );
 }
 
 export default Header
