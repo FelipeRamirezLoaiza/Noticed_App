@@ -6,12 +6,13 @@ function Button({ className = "", type = "button", text, onClick }) {
   const classes = (`form-button ${className}`).trim();
 
   return (
-    <input
+    <button
       className={classes}
       type={type}
-      value={text}
       onClick={onClick}
-    />
+    >
+      {text}
+    </button>
   );
 }
 

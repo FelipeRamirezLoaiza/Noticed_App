@@ -20,8 +20,7 @@
   right: -300px;
   width: 300px;
   height: 100vh;
-  background: #fff;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  background-color: #1f1f1f;
   transition: right 0.3s ease;
   z-index: 9999;
 
@@ -37,6 +36,7 @@
   padding: 0;
   flex: 1 1 auto;
   overflow-y: auto;
+  color: #d8d8d8;
 }
 
 .sidebar.open {
@@ -47,14 +47,30 @@
 }
 
 .sidebar ul li a {
-  display: flex;             /* Ícono y texto en fila */
-  align-items: center;       /* Alineados verticalmente */
-  gap: 10px;                 /* Espacio entre ícono y texto */
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-align: left;
   text-decoration: none;
   color: inherit; 
   padding: 20px 12px;
   cursor: pointer;
+  position: relative; /* importante para que el ::after se posicione dentro */
+}
+
+.sidebar ul li a:hover {
+  background-color: transparent;
+}
+
+.sidebar ul li a:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;              /* línea al borde derecho */
+  width: 3px;            /* grosor de la línea */
+  height: 100%;          /* que cubra todo el alto del enlace */
+  background-color: #949494; /* color de la línea */
+  border-radius: 2px;    /* opcional, esquinas suaves */
 }
 
 .sidebar .avatar {
@@ -71,25 +87,17 @@
   margin: 0; 
 }
 
-.sidebar ul li a:hover {
-  background-color: #d8d8d8;
-}
-
 .close-btn {
+  text-align: start;
   background: none;
+  color: #ffffff;
   border: none;
   font-size: 24px;
   cursor: pointer;
 }
 
-.sidebar .form-button {
-  background-color: #b6b6b6;
-  color: #000000;
-  transition: background 0.2s;
-}
-
-.sidebar .form-button:hover { 
-  background-color: #9c9c9c;
+.side-button {
+  max-width: 100%;
 }
 
 /* Checkbox para menú responsive */

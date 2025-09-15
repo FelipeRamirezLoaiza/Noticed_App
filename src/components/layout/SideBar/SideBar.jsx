@@ -49,7 +49,7 @@ function SideBar({ isOpen, onClose }) {
                 <div className="sidebar-footer">
                     <Button
                         type="button"
-                        className="form-button"
+                        className="side-button"
                         text="Cerrar Sesión"
                         onClick={() => setShowModal(true)}
                     />

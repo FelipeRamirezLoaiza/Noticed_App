@@ -1,14 +1,13 @@
 .form-button {
-  width: 200%;
-  background-color: #007BFF;
-  color: white;
-  padding: 14px 14px;
-  margin: 8px 0;
-  border: none;
+  width: 100%;
+  font-size: 15px;
+  background-color: #b6b6b6;
+  color: #000000;
   cursor: pointer;
-  transition: background 0.3s;
+  padding: 10px 20px;
+  border: none;
 }
 
 .form-button:hover {
-  background-color: #0056b3;
+  background-color: #9c9c9c;
 }

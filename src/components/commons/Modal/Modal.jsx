@@ -3,15 +3,11 @@ import "./Modal.css"
 
 function Modal({ isOpen, title, children, onClose }) {
 
-  // Bloquear scroll al abrir
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
     }
-
-    // Limpieza por seguridad
+    
     return () => {
       document.body.style.overflow = "auto"
     }

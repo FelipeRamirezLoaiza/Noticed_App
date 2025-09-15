@@ -55,3 +55,56 @@
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+/* ============================ */
+/* RESPONSIVE                   */
+/* ============================ */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .modal {
+    width: 80%;
+    padding: 25px 30px;
+    font-size: 0.95rem;
+  }
+
+  .modal h2 {
+    font-size: 1.4rem;
+    margin-top: 15px;
+  }
+}
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+  .modal {
+    width: 90%;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal-close {
+    font-size: 24px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* Celulares pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  .modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .modal h2 {
+    font-size: 1rem;
+  }
+
+  .modal-content {
+    text-align: left; /* en móviles mejor lectura */
+  }
+}

@@ -60,8 +60,7 @@ function RegisterForm({ onSuccess, onLoginClick }) {
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
       <br /><br />
-
-      <Button type="submit" className="button" text="REGISTRARSE" />
+      <Button type="submit" className="register-button" text="REGISTRARSE" />
       <br /><br />
 
       <div className="register">

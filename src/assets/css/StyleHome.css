@@ -10,26 +10,114 @@ main {
   font-family: Arial, sans-serif;
   padding: 0.1rem;
   text-align: center;
-  background-color: #dfdfdf;
+  background: url("../../../public/img/background.png");
+  background-size: 100%;
+  background-position: center;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-top: 80px;
-  margin-bottom: 30px;
-}
-
-/* Contenedor general de las imágenes */
+/* Contenedor general */
 .body-content.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  padding: 5rem 0px 5rem;
+}
+
+/* Estilo del título */
+.body-content.container h2 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Contenedor de imágenes en fila */
+.images-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;
-  margin-bottom: 300px;
+  gap: 5rem;
   flex-wrap: wrap;
 }
 
+/* Sección Nosotros */
+.nosotros {
+  color: #ffffff;
+  padding: 150px 150px;
+}
+
+.nosotros .nosotros-txt h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nosotros-txt p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
 .form-button {
-  max-width: 110px;
+  max-width: 120px;
+}
+
+/* ============================ */
+/* RESPONSIVE                   */
+/* ============================ */
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .body-content.container {
+    gap: 30px;
+    margin-bottom: 200px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+  .body-content.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 150px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+
+  .form-button {
+    max-width: 100px;
+  }
+}
+
+/* Celulares pequeños (≤ 480px) */
+@media (max-width: 480px) {
+  .body-content.container {
+    gap: 25px;
+    margin-bottom: 100px;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .form-button {
+    width: 90px;
+    font-size: 0.9rem;
+  }
 }

@@ -17,10 +17,10 @@ function LoginForm({ onSuccess, onRegisterClick }) {
 
     if (data) {
       localStorage.setItem("user", JSON.stringify(data))
-      // cerramos modal si onSuccess existe
-      if (onSuccess) onSuccess()
       // navegamos a home despues de cerrar el modal
       navigate("/")
+      // cerramos modal si onSuccess existe
+      if (onSuccess) onSuccess()
     }
   };
 
@@ -48,7 +48,7 @@ function LoginForm({ onSuccess, onRegisterClick }) {
       />
       <br /><br />
 
-      <Button type="submit" className="button" text="INGRESAR" />
+      <Button type="submit" className="login-button" text="INGRESAR" />
       <br /><br />
 
       <div className="login">
