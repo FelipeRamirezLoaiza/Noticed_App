@@ -24,6 +24,14 @@ function Home() {
       alt2: "Buso Hover",
       linkText: "Busos",
       linkTo: "/busos",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Buso",
+      alt2: "Buso Hover",
+      linkText: "Busos",
+      linkTo: "/busos",
     }
   ]
 
@@ -43,10 +51,26 @@ function Home() {
       alt2: "Camiseta Hover",
       linkText: "Camisetas",
       linkTo: "/camisetas",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
     }
   ]
 
   const cargos = [
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Cargo",
+      alt2: "Cargo Hover",
+      linkText: "Cargos",
+      linkTo: "/cargos",
+    },
     {
       image1: `${import.meta.env.BASE_URL}img/slider1.png`,
       image2: `${import.meta.env.BASE_URL}img/slider2.png`,

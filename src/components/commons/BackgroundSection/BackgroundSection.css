@@ -79,36 +79,20 @@
   margin: 0 4px;
   border-radius: 50%;
   border: none;
-  background: #bbb;
+  background: #ffffff;
   cursor: pointer;
   transition: background 0.3s;
 }
 
 .controls button.active {
-  background: #fff;
+  background: #282828;
+  opacity: 0.6;
+  transform: scale(0.8);
 }
 
-/* ============================== */
-/*      RESPONSIVE TABLET         */
-/* ============================== */
-@media (max-width: 1024px) {
-  .slide {
-    height: 600px; /* Reducimos altura en tablet */
-  }
-
-  .arrow {
-    font-size: 4rem; /* Flechas más pequeñas */
-    padding: 0.3rem 0.6rem;
-  }
-
-  .arrow:hover {
-    font-size: 5rem; /* Hover más controlado */
-  }
-}
-
-/* ======================== */
-/* RESPONSIVE               */
-/* ======================== */
+/* ========================= */
+/* RESPONSIVE                */
+/* ========================= */
 
 /* Tablets (≤ 1024px) */
 @media (max-width: 1024px) {

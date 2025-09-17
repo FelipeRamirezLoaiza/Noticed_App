@@ -1,12 +1,13 @@
 .image-carousel {
   width: 350px;   /* mismo ancho que el ImagePair */
   margin: auto;
+  position: relative; /* necesario para que los bullets se ubiquen dentro */
 }
 
 /* Flechas de navegación */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffffff;
+  color: #282828;
   width: 15px;
   padding: 0 10px;
   transform: translateY(-30%);
@@ -16,4 +17,29 @@
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   width: 20px;
+}
+
+/* Paginación (bullets) en la parte inferior */
+.image-carousel .swiper-pagination {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+.image-carousel .swiper-pagination-bullet {
+  background: #ffffff;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.image-carousel .swiper-pagination-bullet-active {
+  background: #282828;
+  opacity: 1;
+  transform: scale(0.8);
 }

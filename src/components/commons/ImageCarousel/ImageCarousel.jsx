@@ -1,8 +1,9 @@
 import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation } from "swiper/modules"
+import { Navigation, Pagination } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/navigation"
+import "swiper/css/pagination"
 import ImagePair from "../ImagePair/ImagePair.jsx"
 import "./ImageCarousel.css"
 
@@ -10,8 +11,9 @@ function ImageCarousel({ items }) {
   return (
     <div className="image-carousel">
       <Swiper
-        modules={[Navigation]}
+        modules={[Navigation, Pagination]}
         navigation
+        pagination={{ clickable: true }}
         slidesPerView={1}
         loop={true}
         spaceBetween={20}
