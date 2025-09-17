@@ -20,9 +20,9 @@ function Footer() {
 
         <div className="siguenos">
           <h2>Síguenos</h2>
-          <a href="#"><img src="/img/social2.svg" alt="Social 2" /></a>
-          <a href="#"><img src="/img/social1.svg" alt="Social 1" /></a>
-          <a href="#"><img src="/img/social4.svg" alt="Social 4" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/social2.svg`} alt="Social 2" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/social1.svg`} alt="Social 1" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/social4.svg`} alt="Social 4" /></a>
         </div>
 
         <div className="termino">

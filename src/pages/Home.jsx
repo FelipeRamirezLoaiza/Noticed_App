@@ -14,24 +14,24 @@ function Home() {
         <h2>SE ALGUIEN EN LA MULTITUD</h2>
         <div className="images-row">
           <ImagePair 
-            image1="/img/slider1.png" 
-            image2="/img/slider2.png" 
+            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
+            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
             alt1="Busos"
             alt2="Busos Hover"
             linkText="Busos"
             linkTo="/busos"
           />
           <ImagePair 
-            image1="/img/slider1.png" 
-            image2="/img/slider2.png" 
+            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
+            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
             alt1="Camisetas"
             alt2="Camisetas Hover"
             linkText="Camisetas"
             linkTo="/camisetas"
           />
           <ImagePair 
-            image1="/img/slider1.png" 
-            image2="/img/slider2.png" 
+            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
+            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
             alt1="Cargos"
             alt2="Cargos Hover"
             linkText="Cargos"
@@ -42,7 +42,7 @@ function Home() {
 
       <div>
         <Card
-          image1="/img/slider1.png"
+          image1={`${import.meta.env.BASE_URL}img/slider1.png`}
           alt1="Shadow Lord Tee"
           badgeText="NUEVO LANZAMIENTO"
           title="BUSO VINTAGE"
@@ -56,7 +56,7 @@ function Home() {
 <br/><br/>
       <div>
         <Card
-          image1="/img/slider1.png"
+          image1={`${import.meta.env.BASE_URL}img/slider1.png`}
           alt1="Shadow Lord Tee"
           badgeText="NUEVO LANZAMIENTO"
           title="BUSO VINTAGE"

@@ -40,7 +40,7 @@ function Nosotros() {
                           es nuestra cultura.</p><br/><br/><br/>
       </div>
       <div className="container-image">
-          <img src="/img/slider1.png" /><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+          <img src={`${import.meta.env.BASE_URL}img/slider1.png`} /><br/><br/><br/><br/><br/><br/><br/><br/><br/>
       </div>
     </div>
   )

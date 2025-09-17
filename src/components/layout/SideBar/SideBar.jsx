@@ -10,7 +10,9 @@ function SideBar({ isOpen, onClose }) {
     const [showModal, setShowModal] = useState(false)
 
     const user = JSON.parse(localStorage.getItem("user"))
-    const Profile = user?.foto || "/img/profile.jpg"
+    const Profile = user?.foto
+    ? `${import.meta.env.BASE_URL}${user.foto}`
+    : `${import.meta.env.BASE_URL}img/profile.jpg`;
 
     const handleLogout = () => {
         logoutUser()
@@ -39,11 +41,11 @@ function SideBar({ isOpen, onClose }) {
             <div className={`sidebar ${isOpen ? "open" : ""}`}>
                 <button className="close-btn" onClick={onClose}>×</button>
                 <ul>
-                    <li><Link to="/perfil" onClick={onClose}> <img src={user?.foto || Profile} alt="Avatar" className="avatar" /> Perfil</Link></li>
-                    <li><Link to="/" onClick={onClose}> <img src="/img/home.png" alt="Inicio" className="icon" /> Inicio</Link></li>
-                    <li><Link to="/tienda" onClick={onClose}> <img src="/img/store.png" alt="Tienda" className="icon" /> Tienda</Link></li>
-                    <li><Link to="/carrito" onClick={onClose}> <img src="/img/cart.svg" alt="Carrito" className="icon" /> Carrito</Link></li>
-                    <li><Link to="/contacto" onClick={onClose}> <img src="/img/phone.svg" alt="Contacto" className="icon" /> Contacto</Link></li>
+                    <li><Link to="/perfil" onClick={onClose}> <img src={user?.foto || `${import.meta.env.BASE_URL}img/profile.jpg`} alt="Avatar" className="avatar" /> Perfil</Link></li>
+                    <li><Link to="/" onClick={onClose}> <img src={`${import.meta.env.BASE_URL}img/home.png`} alt="Inicio" className="icon" /> Inicio</Link></li>
+                    <li><Link to="/tienda" onClick={onClose}> <img src={`${import.meta.env.BASE_URL}img/store.png`} alt="Tienda" className="icon" /> Tienda</Link></li>
+                    <li><Link to="/carrito" onClick={onClose}> <img src={`${import.meta.env.BASE_URL}img/cart.svg`} alt="Carrito" className="icon" /> Carrito</Link></li>
+                    <li><Link to="/contacto" onClick={onClose}> <img src={`${import.meta.env.BASE_URL}img/phone.svg`} alt="Contacto" className="icon" /> Contacto</Link></li>
                 </ul>
 
                 <div className="sidebar-footer">

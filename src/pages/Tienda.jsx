@@ -5,24 +5,24 @@ import ProductCard from "../components/commons/ProductCard/ProductCard.jsx";
 function Tienda() {
   // Definir productos
   const productos = [
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced verde", description: "Oversize con capucha" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced rojo", description: "Edición limitada" },
-    { img1: "/img/slider1.png", img2: "/img/slider2.png", title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced verde", description: "Oversize con capucha" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced rojo", description: "Edición limitada" },
+    { img1: `${import.meta.env.BASE_URL}img/slider1.png`, img2: `${import.meta.env.BASE_URL}img/slider2.png`, title: "Buso Noiced negro", description: "Unisex estilo urbano" },
   ];
 
   return (
@@ -30,9 +30,9 @@ function Tienda() {
       {/* Sección de opciones */}
       <section className="options">
         <div className="categories">
-          <a href="#"><img src="/img/option1.png" alt="option1" /></a>
-          <a href="#"><img src="/img/option2.png" alt="option2" /></a>
-          <a href="#"><img src="/img/option3.png" alt="option3" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/option1.png`} alt="option1" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/option2.png`} alt="option2" /></a>
+          <a href="#"><img src={`${import.meta.env.BASE_URL}img/option3.png`} alt="option3" /></a>
         </div>
       </section>
 
