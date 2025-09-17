@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://FelipeRamirezLoaiza.github.io/Noticed_App",
+  "homepage": "https://feliperamirezloaiza.github.io/Noticed_App/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
