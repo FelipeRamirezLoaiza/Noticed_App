@@ -10,7 +10,9 @@ function Header({ onPerfilClick }) {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   const user = JSON.parse(localStorage.getItem("user"));
-  const Profile = user?.foto || "/img/profile.jpg";
+  const Profile = user?.foto
+  ? `${import.meta.env.BASE_URL}${user.foto}`
+  : `${import.meta.env.BASE_URL}img/profile.jpg`;
 
   // funciones para alternar modales
   const openRegisterFromLogin = () => {
@@ -27,7 +29,7 @@ function Header({ onPerfilClick }) {
     <header>
       <div className="menu-container">
         <a href="/" className="logo-left">
-          <img src="/img/logo.png" alt="Logo" />
+          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" />
         </a>
 
         <nav className="left-navbar">
@@ -36,12 +38,12 @@ function Header({ onPerfilClick }) {
         </nav>
 
         <a href="/" className="logo-center">
-          <img src="/img/logo.png" alt="Logo" />
+          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" />
         </a>
 
         <input type="checkbox" id="menu" />
         <label htmlFor="menu">
-          <img className="menu-icono" src="/img/menu.png" alt="Menú" />
+          <img className="menu-icono" src={`${import.meta.env.BASE_URL}img/menu.png`} alt="Menú" />
         </label>
 
         {/* Opciones */}
@@ -57,7 +59,7 @@ function Header({ onPerfilClick }) {
                   className="login-btn"
                   onClick={() => setIsLoginOpen(true)}
                 >
-                  <img src="/img/acceso.svg" alt="Acceso" />
+                  <img src={`${import.meta.env.BASE_URL}img/acceso.svg`} alt="Acceso" />
                 </button>
               </li>
             )}
