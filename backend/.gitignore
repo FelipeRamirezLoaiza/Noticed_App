@@ -1,0 +1,45 @@
+# Dependencias
+node_modules/
+dist/
+build/
+.vite/
+.cache/
+.eslintcache
+coverage/
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+backend/.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+backend/npm-debug.log*
+backend/yarn-error.log*
+
+# IDEs / editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Prisma
+backend/prisma/dev.db
+backend/prisma/test.db
+backend/prisma/*.sqlite
+backend/prisma/migrations/*/steps.json
+
+# Compilados de TypeScript (si usas TS en backend)
+backend/dist/
+backend/build/
+backend/tsconfig.tsbuildinfo
