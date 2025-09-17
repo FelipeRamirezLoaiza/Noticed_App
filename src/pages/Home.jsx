@@ -3,11 +3,13 @@ import { Link } from "react-router-dom"
 import ImagePair from "../components/commons/ImagePair/ImagePair.jsx"
 import BackgroundSection from "../components/commons/BackgroundSection/BackgroundSection.jsx"
 import Button from "../components/commons/Button/Button.jsx"
+import Card from "../components/commons/Card/Card.jsx"
 import "../assets/css/StyleHome.css"
 
 function Home() {
   return (
     <main>
+      <BackgroundSection />
       <div className="body-content container">
         <h2>SE ALGUIEN EN LA MULTITUD</h2>
         <div className="images-row">
@@ -37,7 +39,35 @@ function Home() {
           />
         </div>
       </div>
-      <BackgroundSection />
+
+      <div>
+        <Card
+          image1="/img/slider1.png"
+          alt1="Shadow Lord Tee"
+          badgeText="NUEVO LANZAMIENTO"
+          title="BUSO VINTAGE"
+          description={`Descubre nuestra nueva colección exclusiva 2025.
+            \nDiseño minimalista con acabados premium que define el estilo urbano moderno.`}
+          features={["Alto Gramaje", "Diseño Imponente", "Edición Limitada"]}
+          price="$160.000"
+          oldPrice="$180.000"
+        />
+      </div>
+<br/><br/>
+      <div>
+        <Card
+          image1="/img/slider1.png"
+          alt1="Shadow Lord Tee"
+          badgeText="NUEVO LANZAMIENTO"
+          title="BUSO VINTAGE"
+          description={`Descubre nuestra nueva colección exclusiva 2025.
+            \nDiseño minimalista con acabados premium que define el estilo urbano moderno.`}
+          features={["Alto Gramaje", "Diseño Imponente", "Edición Limitada"]}
+          price="$160.000"
+          oldPrice="$180.000"
+        />
+      </div>
+
       <section className="nosotros">
         <div className="nosotros-txt">
           <h2>Somos</h2>

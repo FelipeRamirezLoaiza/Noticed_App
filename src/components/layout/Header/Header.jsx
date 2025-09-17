@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "../../commons/SearchBar/SearchBar";
 import Modal from "../../commons/Modal/Modal";
 import LoginForm from "../../forms/login/LoginForm";
 import RegisterForm from "../../forms/register/RegisterForm";
@@ -9,10 +8,6 @@ import "./Header.css";
 function Header({ onPerfilClick }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
-
-  const handleSearch = (query) => {
-    console.log("Buscando:", query);
-  };
 
   const user = JSON.parse(localStorage.getItem("user"));
   const Profile = user?.foto || "/img/profile.jpg";
@@ -31,7 +26,16 @@ function Header({ onPerfilClick }) {
   return (
     <header>
       <div className="menu-container">
-        <a href="/" className="logo">
+        <a href="/" className="logo-left">
+          <img src="/img/logo.png" alt="Logo" />
+        </a>
+
+        <nav className="left-navbar">
+          <span><Link to="/tienda">HOMBRE</Link></span>
+          <span><Link to="/tienda">MUJER</Link></span>
+        </nav>
+
+        <a href="/" className="logo-center">
           <img src="/img/logo.png" alt="Logo" />
         </a>
 
@@ -40,22 +44,12 @@ function Header({ onPerfilClick }) {
           <img className="menu-icono" src="/img/menu.png" alt="Menú" />
         </label>
 
-        {/* Barra de búsqueda */}
-        <div className="search-container">
-          <SearchBar onSearch={handleSearch} />
-        </div>
-
         {/* Opciones */}
-        <nav className="navbar">
+        <nav className="right-navbar">
           <ul>
-            <li>
-              <Link to="/">
-                <img src="/img/home.png" alt="Acceso" />
-              </Link>
-            </li>
-            <li><Link to="/tienda">Tienda</Link></li>
-            <li><Link to="/nosotros">Nosotros</Link></li>
-            <li><Link to="/contacto">Contacto</Link></li>
+            <li><Link to="/tienda">TIENDA</Link></li>
+            <li><Link to="/nosotros">NOSOTROS</Link></li>
+            <li><Link to="/contacto">CONTACTO</Link></li>
 
             {!user && (
               <li>
