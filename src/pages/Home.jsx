@@ -1,42 +1,84 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import ImagePair from "../components/commons/ImagePair/ImagePair.jsx"
+import ImageCarousel from "../components/commons/ImageCarousel/ImageCarousel.jsx"
 import BackgroundSection from "../components/commons/BackgroundSection/BackgroundSection.jsx"
 import Button from "../components/commons/Button/Button.jsx"
 import Card from "../components/commons/Card/Card.jsx"
 import "../assets/css/StyleHome.css"
 
 function Home() {
+
+  const busos = [
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Buso",
+      alt2: "Buso Hover",
+      linkText: "Busos",
+      linkTo: "/busos",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Buso",
+      alt2: "Buso Hover",
+      linkText: "Busos",
+      linkTo: "/busos",
+    }
+  ]
+
+  const camisetas = [
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
+    }
+  ]
+
+  const cargos = [
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Cargo",
+      alt2: "Cargo Hover",
+      linkText: "Cargos",
+      linkTo: "/cargos",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      alt1: "Cargo",
+      alt2: "Cargo Hover",
+      linkText: "Cargos",
+      linkTo: "/cargos",
+    }
+  ]
+
   return (
     <main>
       <BackgroundSection />
       <div className="body-content container">
         <h2>SE ALGUIEN EN LA MULTITUD</h2>
         <div className="images-row">
-          <ImagePair 
-            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
-            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
-            alt1="Busos"
-            alt2="Busos Hover"
-            linkText="Busos"
-            linkTo="/busos"
-          />
-          <ImagePair 
-            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
-            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
-            alt1="Camisetas"
-            alt2="Camisetas Hover"
-            linkText="Camisetas"
-            linkTo="/camisetas"
-          />
-          <ImagePair 
-            image1={`${import.meta.env.BASE_URL}img/slider1.png`} 
-            image2={`${import.meta.env.BASE_URL}img/slider2.png`} 
-            alt1="Cargos"
-            alt2="Cargos Hover"
-            linkText="Cargos"
-            linkTo="/cargos"
-          />
+          {/* Carrusel de Busos */}
+          <ImageCarousel items={busos} />
+
+          {/* Carrusel de Camisetas */}
+          <ImageCarousel items={camisetas} />
+
+          {/* Carrusel de Cargos */}
+          <ImageCarousel items={cargos} />
         </div>
       </div>
 
