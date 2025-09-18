@@ -1,3 +1,6 @@
+/* ======================================== */
+/* Estilos generales del BackgroundSection  */
+/* ======================================== */
 .fondos {
   width: 100%;
   overflow: hidden;
@@ -90,14 +93,14 @@
   transform: scale(0.8);
 }
 
-/* ========================= */
-/* RESPONSIVE                */
-/* ========================= */
+/* =========== */
+/* Responsive  */
+/* =========== */
 
 /* Tablets (≤ 1024px) */
 @media (max-width: 1024px) {
   .slide {
-    height: 400px;
+    height: 590px;
   }
 
   .arrow {
@@ -118,7 +121,7 @@
 /* Celulares (≤ 768px) */
 @media (max-width: 768px) {
   .slide {
-    height: 280px; /* Para celulares pequeños */
+    height: 440px;
   }
 
   .arrow {

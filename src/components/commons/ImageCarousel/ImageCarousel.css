@@ -1,5 +1,6 @@
 .image-carousel {
-  width: 350px;   /* mismo ancho que el ImagePair */
+  width: 100%;
+  max-width: 350px;   /* mismo ancho que el ImagePair */
   margin: auto;
   position: relative; /* necesario para que los bullets se ubiquen dentro */
 }
@@ -42,4 +43,43 @@
   background: #282828;
   opacity: 1;
   transform: scale(0.8);
+}
+
+/* =========== */
+/* Responsive
+/* =========== */
+
+/* Celulares (≤ 768px) */
+@media (max-width: 767px) {
+  .image-carousel {
+    max-width: 90%; /* ocupa casi todo el ancho */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 12px;
+    padding: 0 6px;
+  }
+
+  .image-carousel .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Tablets (≤ 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-carousel {
+    max-width: 500px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 18px;
+  }
+
+  .image-carousel .swiper-pagination-bullet {
+    width: 9px;
+    height: 9px;
+  }
 }

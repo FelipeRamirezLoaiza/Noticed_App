@@ -69,8 +69,8 @@
   right: 0;              /* línea al borde derecho */
   width: 3px;            /* grosor de la línea */
   height: 100%;          /* que cubra todo el alto del enlace */
-  background-color: #949494; /* color de la línea */
-  border-radius: 2px;    /* opcional, esquinas suaves */
+  background-color: #949494;
+  border-radius: 2px;
 }
 
 .sidebar .avatar {

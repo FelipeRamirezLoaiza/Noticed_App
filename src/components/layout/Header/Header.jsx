@@ -28,18 +28,18 @@ function Header({ onPerfilClick }) {
   return (
     <header>
       <div className="menu-container">
-        <a href="/" className="logo-left">
-          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" />
-        </a>
+        <div className="logo-left">
+          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" href="/" />
+        </div>
 
         <nav className="left-navbar">
           <span><Link to="/tienda">HOMBRE</Link></span>
           <span><Link to="/tienda">MUJER</Link></span>
         </nav>
 
-        <a href="/" className="logo-center">
-          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" />
-        </a>
+        <div className="logo-center">
+          <img src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Logo" href="/" />
+        </div>
 
         <input type="checkbox" id="menu" />
         <label htmlFor="menu">

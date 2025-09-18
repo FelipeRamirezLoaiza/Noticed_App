@@ -1,10 +1,12 @@
 /* Cada bloque de imagen */
 .image-container {
   position: relative;
-  width: 350px;
+  width: 100%;          /* Que ocupe todo el ancho disponible */
+  max-width: 350px;     /* Límite en desktop */
   height: auto;
   overflow: hidden;
   flex-shrink: 0;
+  margin: auto;         /* Centrado */
 }
 
 /* Link dentro de cada imagen */
@@ -22,7 +24,7 @@
 }
 
 .image-container .category-link:hover { 
-  font-size: 2.5rem;
+  font-size: 1.3rem; /* Ajuste más realista en hover */
   color: #363636;
 }
 
@@ -53,4 +55,42 @@
 
 .image-container:hover .image2 {
   opacity: 1;
+}
+
+/* =========== */
+/* Responsive  */
+/* =========== */
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+  .image-container {
+    max-width: 90%; /* ocupa casi todo el ancho */
+  }
+
+  .image-container .category-link {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+}
+
+/* Tablets (≤ 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .image-container {
+    max-width: 500px;
+  }
+
+  .image-container .category-link {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop (1025px en adelante) */
+@media (min-width: 1025px) {
+  .image-container {
+    max-width: 700px;
+  }
+
+  .image-container .category-link {
+    font-size: 1.2rem;
+  }
 }

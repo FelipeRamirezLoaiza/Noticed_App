@@ -8,6 +8,7 @@
   max-width: 100%;
   margin: auto;
   gap: 2rem;
+  position: relative;
 }
 
 .product-info {
@@ -19,22 +20,25 @@
 }
 
 .badge {
-  display: inline-block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
   background: #03e2ff;
   color: #fff;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
   border-radius: 20px;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .product-info h2 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-bottom: 1rem;
 }
 
 .product-info p {
+  font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #d1d5db;
 }
@@ -48,11 +52,12 @@
 .features li {
   margin-bottom: 0.5rem;
   color: #ffffff;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .price-box {
   display: flex;
+  justify-content: center;
   align-items: baseline;
   gap: 1rem;
   margin-bottom: 1.5rem;
@@ -95,4 +100,50 @@
 
 .product-card .card-button {
   max-width: 210px;
+}
+
+/* =========== */
+/* Responsive  */
+/* =========== */
+
+/* Tablets (≤ 1024) */
+@media (max-width: 1024px) {
+  .product-card .card-button {
+  max-width: 210px;
+  font-size: 0.9rem;
+  }
+}
+
+/* Celulares (≤ 768px) */
+@media (max-width: 768px) {
+  .badge {
+  top: 30px;
+  left: 30px;
+  font-size: 0.6rem;
+}
+
+  .product-info h2 {
+  font-size: 1.6rem;
+}
+
+.product-info p {
+  font-size: 0.8rem;
+}
+
+.features li {
+  font-size: 0.8rem;
+}
+
+.price {
+  font-size: 1.3rem;
+}
+
+.old-price {
+  font-size: 0.9rem;
+}
+
+.product-card .card-button {
+  max-width: 160px;
+  font-size: 0.65rem;
+}
 }
