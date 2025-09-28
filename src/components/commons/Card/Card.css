@@ -94,7 +94,7 @@
 }
 
 .product-image img {
-  max-width: 100%;
+  max-width: 60%;
   border-radius: 12px;
 }
 
@@ -112,6 +112,10 @@
   max-width: 210px;
   font-size: 0.9rem;
   }
+
+  .product-image img {
+  max-width: 100%;
+}
 }
 
 /* Celulares (≤ 768px) */

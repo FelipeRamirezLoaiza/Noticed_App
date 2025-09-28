@@ -8,6 +8,33 @@ import "../assets/css/StyleHome.css"
 
 function Home() {
 
+  const camisetas = [
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider3.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider4.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider3.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider4.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
+    },
+    {
+      image1: `${import.meta.env.BASE_URL}img/slider3.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider4.png`,
+      alt1: "Camiseta",
+      alt2: "Camiseta Hover",
+      linkText: "Camisetas",
+      linkTo: "/camisetas",
+    }
+  ]
+
   const busos = [
     {
       image1: `${import.meta.env.BASE_URL}img/slider1.png`,
@@ -35,53 +62,26 @@ function Home() {
     }
   ]
 
-  const camisetas = [
-    {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
-      alt1: "Camiseta",
-      alt2: "Camiseta Hover",
-      linkText: "Camisetas",
-      linkTo: "/camisetas",
-    },
-    {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
-      alt1: "Camiseta",
-      alt2: "Camiseta Hover",
-      linkText: "Camisetas",
-      linkTo: "/camisetas",
-    },
-    {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
-      alt1: "Camiseta",
-      alt2: "Camiseta Hover",
-      linkText: "Camisetas",
-      linkTo: "/camisetas",
-    }
-  ]
-
   const cargos = [
     {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      image1: `${import.meta.env.BASE_URL}img/slider5.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider6.png`,
       alt1: "Cargo",
       alt2: "Cargo Hover",
       linkText: "Cargos",
       linkTo: "/cargos",
     },
     {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      image1: `${import.meta.env.BASE_URL}img/slider5.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider6.png`,
       alt1: "Cargo",
       alt2: "Cargo Hover",
       linkText: "Cargos",
       linkTo: "/cargos",
     },
     {
-      image1: `${import.meta.env.BASE_URL}img/slider1.png`,
-      image2: `${import.meta.env.BASE_URL}img/slider2.png`,
+      image1: `${import.meta.env.BASE_URL}img/slider5.png`,
+      image2: `${import.meta.env.BASE_URL}img/slider6.png`,
       alt1: "Cargo",
       alt2: "Cargo Hover",
       linkText: "Cargos",
@@ -95,11 +95,11 @@ function Home() {
       <div className="body-content container">
         <h2>SE ALGUIEN EN LA MULTITUD</h2>
         <div className="images-row">
-          {/* Carrusel de Busos */}
-          <ImageCarousel items={busos} />
-
           {/* Carrusel de Camisetas */}
           <ImageCarousel items={camisetas} />
+
+          {/* Carrusel de Busos */}
+          <ImageCarousel items={busos} />
 
           {/* Carrusel de Cargos */}
           <ImageCarousel items={cargos} />
@@ -119,7 +119,7 @@ function Home() {
           oldPrice="$180.000"
         />
       </div>
-<br/><br/>
+      <br/><br/>
       <div>
         <Card
           image1={`${import.meta.env.BASE_URL}img/slider1.png`}

@@ -20,12 +20,11 @@
   text-decoration: none;
   border-radius: 5px;
   z-index: 2;
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 .image-container .category-link:hover { 
-  font-size: 1.3rem; /* Ajuste más realista en hover */
-  color: #363636;
+  font-size: 2rem;
 }
 
 /* Imagen principal */

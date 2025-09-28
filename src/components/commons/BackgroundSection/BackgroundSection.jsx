@@ -3,10 +3,10 @@ import "./BackgroundSection.css"
 
 
 const images = [
-  `${import.meta.env.BASE_URL}img/fondo.png`,
+  `${import.meta.env.BASE_URL}img/fondo4.png`,
   `${import.meta.env.BASE_URL}img/fondo2.png`,
   `${import.meta.env.BASE_URL}img/fondo3.png`,
-  `${import.meta.env.BASE_URL}img/fondo4.png`
+  `${import.meta.env.BASE_URL}img/fondo.png`
 ];
 
 function BackgroundSection() {
