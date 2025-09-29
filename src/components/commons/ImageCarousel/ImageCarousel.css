@@ -9,10 +9,11 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: #282828;
-  width: 15px;
-  padding: 0 10px;
-  transform: translateY(-30%);
-  transition: transform 0.3s ease, color 0.3s ease;
+  width: 25px;
+  height: 25px;
+  top: 50%;              /* centradas verticalmente */
+  transform: translateY(-50%);
+  z-index: 20;           /* encima de la imagen */
 }
 
 .swiper-button-next:hover,
@@ -50,25 +51,21 @@
 /* =========== */
 
 /* Celulares (≤ 768px) */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .image-carousel {
-    max-width: 90%; /* ocupa casi todo el ancho */
+    max-width: 250px; /* ocupa casi todo el ancho */
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    width: 12px;
-    padding: 0 6px;
-  }
-
-  .image-carousel .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 18px;
+    height: 18px;
+    padding: 0px 50px;
   }
 }
 
 /* Tablets (≤ 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .image-carousel {
     max-width: 500px;
   }

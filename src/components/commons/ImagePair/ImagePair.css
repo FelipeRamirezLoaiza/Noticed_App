@@ -63,7 +63,7 @@
 /* Celulares (≤ 768px) */
 @media (max-width: 768px) {
   .image-container {
-    max-width: 90%; /* ocupa casi todo el ancho */
+    max-width: 250px;
   }
 
   .image-container .category-link {
