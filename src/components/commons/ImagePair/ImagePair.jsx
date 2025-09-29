@@ -1,6 +1,7 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "./ImagePair.css"
+// src/components/commons/ImagePair/ImagePair.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+import "./ImagePair.css";
 
 function ImagePair({ image1, image2, alt1, alt2, linkText, linkTo }) {
   return (
@@ -18,4 +19,4 @@ function ImagePair({ image1, image2, alt1, alt2, linkText, linkTo }) {
   )
 }
 
-export default ImagePair
+export default ImagePair;

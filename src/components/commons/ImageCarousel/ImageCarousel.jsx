@@ -1,11 +1,12 @@
-import React from "react"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Navigation, Pagination } from "swiper/modules"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import ImagePair from "../ImagePair/ImagePair.jsx"
-import "./ImageCarousel.css"
+// src/components/commons/ImageCarousel/ImageCarousel.jsx
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import ImagePair from "../ImagePair/ImagePair.jsx";
+import "./ImageCarousel.css";
 
 function ImageCarousel({ items }) {
   return (
@@ -35,4 +36,4 @@ function ImageCarousel({ items }) {
   );
 }
 
-export default ImageCarousel
+export default ImageCarousel;

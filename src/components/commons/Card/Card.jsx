@@ -1,7 +1,8 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import Button from "../Button/Button.jsx"
-import "./Card.css"
+// src/components/commons/Card/Card.jsx
+import React from "react";
+import { Link } from "react-router-dom";
+import Button from "../Button/Button.jsx";
+import "./Card.css";
 
 function Card({
   image1,
@@ -15,7 +16,6 @@ function Card({
 }) {
   return (
     <div className="product-card">
-      {/* Texto a la izquierda */}
       <div className="product-info">
         {badgeText && <span className="badge">{badgeText}</span>}
         <h2>{title}</h2>
@@ -35,7 +35,6 @@ function Card({
         <Link to="/nosotros"> <Button type="submit" className="card-button" text="AGREGAR AL CARRITO" /></Link>
       </div>
 
-      {/* Imagen del producto a la derecha */}
       <div className="product-image">
         <img src={image1} alt={alt1} />
       </div>
@@ -43,4 +42,4 @@ function Card({
   )
 }
 
-export default Card
+export default Card;

@@ -8,7 +8,7 @@
 
 main {
   font-family: Arial, sans-serif;
-  padding: 0.1rem;
+  padding: 0rem;
   text-align: center;
   background: #ffffff;
   background-size: 100%;
@@ -20,8 +20,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-  padding: 5rem 0px 5rem;
 }
 
 /* Estilo del título */
@@ -29,18 +27,28 @@ main {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 2rem;
   color: #000000;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
   text-align: center;
 }
 
 /* Contenedor de imágenes en fila */
 .images-row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 5rem;
-  flex-wrap: wrap;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  gap: 2rem;
+  flex-wrap: nowrap; /* en desktop nunca bajan de línea */
+  width: 100%;
+  overflow: hidden; /* evita scroll lateral feo */
+}
+
+.images-col {
+  flex: 1 1 0; /* que se ajusten proporcionalmente */
+  display: flex;
+  justify-content: center;
+  min-width: 0; /* truco: evita que se desborden */
 }
 
 .product-info p {
@@ -73,24 +81,19 @@ main {
 /* Responsive  */
 /* =========== */
 
-/* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
-  .body-content.container {
-    gap: 30px;
-    margin-bottom: 200px;
-  }
-
+/* Tablets (≤ 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
   .body-content.container h2 {
     font-size: 1.4rem;
     margin-bottom: 20px;
   }
 }
 
-/* Celulares (≤ 768px) */
-@media (max-width: 768px) {
+/* Tablets medianas (≤ 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
   .body-content.container {
     gap: 40px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
 
   .body-content.container h2 {
@@ -99,7 +102,7 @@ main {
   }
 
   .nosotros {
-    padding: 10px 10px;
+    padding: 100px 100px;
   }
 
   .form-button {
@@ -107,8 +110,8 @@ main {
   }
 }
 
-/* Celulares pequeños (≤ 480px) */
-@media (max-width: 480px) {
+/* Celulares pequeños (≤ 576px) */
+@media (max-width: 576px) {
   .body-content.container {
     gap: 25px;
     margin-bottom: 100px;
@@ -122,11 +125,25 @@ main {
   }
 
   .nosotros {
-    padding: 0px 0px;
+    padding: 100px 100px;
   }
 
   .form-button {
     width: 90px;
     font-size: 0.9rem;
+  }
+}
+
+/* Celulares pequeños (≤ 768px) */
+@media (max-width: 768px) {
+  .images-row {
+    flex-direction: column;   /* apila vertical */
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .images-col {
+    width: 100%;
+    max-width: 95%; /* ocupa casi toda la pantalla */
   }
 }
