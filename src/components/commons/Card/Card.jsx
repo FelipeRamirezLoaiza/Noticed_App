@@ -32,7 +32,7 @@ function Card({
           {oldPrice && <span className="old-price">{oldPrice}</span>}
         </div>
 
-        <Link to="/nosotros"> <Button type="submit" className="card-button" text="AGREGAR AL CARRITO" /></Link>
+        <Link to="/nosotros"> <Button type="submit" className="card-button" text="AGREGAR" /></Link>
       </div>
 
       <div className="product-image">

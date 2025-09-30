@@ -110,8 +110,12 @@
 @media (max-width: 1024px) {
   .product-card .card-button {
   max-width: 210px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   }
+
+  .product-info h2 {
+  font-size: 2.2rem;
+}
 
   .product-image img {
   max-width: 100%;
@@ -121,13 +125,11 @@
 /* Celulares (≤ 768px) */
 @media (max-width: 768px) {
   .badge {
-  top: 30px;
-  left: 30px;
-  font-size: 0.6rem;
+    font-size: 0.7rem;
 }
 
   .product-info h2 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .product-info p {
@@ -150,4 +152,12 @@
   max-width: 160px;
   font-size: 0.65rem;
 }
+}
+
+/* Celulares (≤ 576px) */
+@media (max-width: 576px) {
+  .product-info h2 {
+    padding-top: 20px;
+    font-size: 1.3rem;
+  }
 }
