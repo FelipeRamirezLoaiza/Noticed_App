@@ -97,44 +97,67 @@
 /* Responsive  */
 /* =========== */
 
-/* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
+/* Tablets grandes (≤ 1200px) */
+@media (min-width: 993px) and (max-width: 1200px) {
   .slide {
-    height: 590px;
+    height: 720px;
   }
-
   .arrow {
-    font-size: 3rem;
-    padding: 0.2rem 0.4rem;
-  }
-
-  .arrow:hover {
-    font-size: 3.5rem;
-  }
-
-  .controls button {
-    width: 10px;
-    height: 10px;
+    font-size: 4rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 
-/* Celulares (≤ 768px) */
-@media (max-width: 768px) {
+/* Tablets medianas (≤ 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
   .slide {
-    height: 440px;
+    height: 500px;
   }
-
   .arrow {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
-
   .arrow:hover {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
   }
+  .controls button {
+    width: 9px;
+    height: 9px;
+  }
+}
 
+/* Celulares pequeños (≤ 576px) */
+@media (max-width: 576px) {
+  .slide {
+    height: 400px;
+  }
+  .arrow {
+    font-size: 2.5rem;
+    padding: 0.2rem 0.4rem;
+  }
+  .arrow:hover {
+    font-size: 2.8rem;
+  }
   .controls button {
     width: 8px;
     height: 8px;
-    margin: 0 2px;
+  }
+}
+
+/* Celulares grandes específicos (Huawei Y9 Prime y similares: 320px–400px) */
+@media (min-width: 320px) and (max-width: 400px) {
+  .slide {
+    height: 360px;
+  }
+  .arrow {
+    font-size: 2rem;
+    padding: 0.2rem 0.3rem;
+  }
+  .arrow:hover {
+    font-size: 2.3rem;
+  }
+  .controls button {
+    width: 7px;
+    height: 7px;
+    margin: 0 1px;
   }
 }
